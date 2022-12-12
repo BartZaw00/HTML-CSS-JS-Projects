@@ -3,6 +3,7 @@
 <head>
     <title>Barber Shop Website Design</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width = device - width, initial-scale = 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap"
@@ -16,11 +17,44 @@
             <h1>Hair Studio</h1>
             <p>Style Your Hair Is Style Your Life</p>
             <div class="banner-btn">
-                <a href="#">Find Out</a>
-                <a href="#">Read More</a>
+                <a href="#"><span></span>Find Out</a>
+                <a href="#"><span></span>Read More</a>
             </div>
         </div>
     </section>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">TESTIMONIALS</a></li>
+                <li><a href="#">MEET US</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="images/menu.png" alt="menu" id="menu">
+    </div>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var menu = document.getElementById("menu");
+
+        sideNav.style.right == "-250px" //idk why
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png";
+            }
+            else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+    </script>
 </body>
 
 </html>
