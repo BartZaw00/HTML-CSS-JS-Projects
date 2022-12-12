@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(images/banner.jpg);
+    background-size: cover;
+    /* cover - jeden obrazek zajmie tło 
+       contain - jeden obrazek zająłby tyle miejsca ile potrzebuje + powtórka */
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    /* absolute - element will be positioned at a specific location within its parent element, and 
+    it will not be affected by the positioning of other elements on the page */
+    top: 4%;
+    left: 5%;
+}
+
+.banner-text {
+    text-align: center;
+    color: #fff;
+    padding-top: 180px;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+}
+
+.banner-btn a {
+    width: 150px;
+    text-decoration: none;
+}
