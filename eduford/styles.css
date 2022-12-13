@@ -8,11 +8,15 @@
 
 #banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), #009688), url(images/banner.jpg);
+    /* super efekt */
     background-size: cover;
     /* cover - jeden obrazek zajmie tło 
        contain - jeden obrazek zająłby tyle miejsca ile potrzebuje + powtórka */
     background-position: center;
     height: 100vh;
+    /* 100vh - full height of viewport (viewport is the area of the browser window that is used to display the webpage)
+       100% - full height of parent element
+    */
 }
 
 .logo {
@@ -55,12 +59,17 @@
     position: relative;
     /* domyślnie jest static więc trzeba ustawić na relative
     static - umiejscowiony zgodnie z "flow" elementu, nie może użyć top,left,bottom,right
+    
     relative - umiejscowiony zgodnie z "flow" elementu, może użyć top,left,bottom,right
+    
     absolute - umiejscowiony absolutnie względem elementu rodzica, zostanie umieszczony 
     w określonym miejscu w swoim elemencie rodzica i inne elementy na stronie nie będą miały
     na niego wpływu
+    
     fixed - umiejscowiony zgodnie z viewportem, będzie na tej samej pozycji ekranu nawet
-    jeśli strona będzie scrollowana
+    jeśli strona będzie scrollowana, 
+    NIE MA ŻADNEGO ZWIĄZKU Z ELEMENTAMI RODZICA, INTERESUJE GO TYLKO ELEMENT ROOT (html)
+    
     sticky - umiejscowiony tak jak 'relative' do momentu aż pewna pozycja scrollowania zostanie
     przekroczona i wtedy staje się 'fixed'
     */
@@ -158,6 +167,9 @@ nav ul li a {
     color: #009688;
     font-weight: bold;
     position: relative;
+    /* WAŻNE: Relative u parenta pozwala żeby absolute było względem parenta.
+    W przypadku, gdy parent jest static, pozycja child będzie absolutna względem 
+    pierwszego elementu parenta który jest inny niż static lub w ostateczności elementu root */
     z-index: 1;
     display: inline-block;
 }
@@ -172,6 +184,9 @@ nav ul li a {
     height: 35px;
     background: linear-gradient(#019587, #fff);
     position: absolute;
+    /* WAŻNE: Relative u parenta pozwala żeby absolute było względem parenta.
+    W przypadku, gdy parent jest static, pozycja child będzie absolutna względem 
+    pierwszego elementu parenta który jest inny niż static lub w ostateczności elementu root */
     top: -20px;
     left: 0;
     z-index: -1;
@@ -203,3 +218,51 @@ nav ul li a {
     border-radius: 10px;
 }
 
+.features h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+
+.features-desc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.feature-icon .fa {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+
+.feature-text p {
+    padding: 0 20px;
+    text-align: initial;
+    /* if parent had different text-align, you can go back
+    to default setting by using INITIAL */
+}
+
+@media screen and (max-width:770px) {
+    .title-text h1 {
+        font-size: 35px;
+    }
+
+    .features {
+        flex-basis: 100%;
+    }
+    
+    .features-img {
+        flex-basis: 100%;
+    }
+
+    .features-img img {
+        width: 100%;
+    }
+
+}
