@@ -82,11 +82,11 @@ body {
     width: 10px;
     height: 10px;
     background-color: #41db51;
+    border: 1px solid white;
+    border-radius: 50%;
     position: absolute;
     top: 0px;
     right: 0px;
-    border: 1px solid white;
-    border-radius: 50%;
 }
 
 /* -- CONTAINER -- */
@@ -147,6 +147,8 @@ body {
     margin-right: 10px;
     border-radius: 5px;
 }
+
+/* -- Main -- */
 
 .main-content {
     background-color: yellow;
@@ -231,7 +233,47 @@ body {
     text-decoration: none;
     color: #1876f2;
 }
+
 .event-right img {
-    display: inline-block;
     width: 10px;
+}
+
+.advertisement img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.conversation-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.conversation-details a {
+    text-decoration: none;
+    color: #626262;
+}
+
+.conversation-user {
+    width: 40px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.conversation-user img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.conversation-user a {
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #626262;
+}
+
+.conversation-user .active {
+    top: unset; /* pobiera wartość top od parenta, a ta u parenta nie jest ustawiona 
+    więc domyślnie jest top: auto */
+    bottom: 4px;
 }
