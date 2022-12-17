@@ -104,12 +104,14 @@ body {
     top: 70px;
 }
 
-.imp-links ul li, .shortcut-links ul li {
+.imp-links ul li,
+.shortcut-links ul li {
     list-style: none;
     margin-bottom: 30px;
 }
 
-.imp-links ul li a, .shortcut-links ul li a {
+.imp-links ul li a,
+.shortcut-links ul li a {
     text-decoration: none;
     color: #626262;
     font-size: 18px;
@@ -148,4 +150,88 @@ body {
 
 .main-content {
     background-color: yellow;
+}
+
+.right-sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+}
+
+.events {
+    margin-bottom: 10px;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.sidebar-header>h4 {
+    font-weight: 600;
+    color: #626262;
+}
+
+.sidebar-header>a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #1876f2;
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+}
+
+.event {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.event-left {
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* dolny border-radius jest ukryty dzieki temu
+    /* co dzieje się z elementami, które wychodzą poza granice swojego kontenera:
+    visible - elementy, które wychodzą poza granice kontenera, są widoczne
+    hidden - elementy, które wychodzą poza granice kontenera, są ukryte
+    scroll - do kontenera są dodawane paski przewijania, dzięki czemu można przewijać zawartość kontenera
+    auto -  paski przewijania są dodawane tylko wtedy, gdy zawartość kontenera przekracza jego granice
+    */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-left span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1876f2;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 0;
+}
+
+.event-right p {
+    font-size: 12px;
+}
+
+.event-right a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+}
+.event-right img {
+    display: inline-block;
+    width: 10px;
 }
