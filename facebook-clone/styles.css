@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: #efefef;
+}
+
+#navbar {
+    width: 100%;
+    background: #1876f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.left-menu, .right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+    margin-right: 45px;
+}
+
+.left-menu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.icon {
+    width: 28px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.search-box {
+    background-color: #efefef;
+    display: flex;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.search-icon {
+    width: 15px;
+}
+
+.search {
+    background-color: transparent; 
+    /* To spowoduje, że tło elementu będzie przezroczyste 
+    i będzie widać tła za nim.   */
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.profile-pic-icon {
+    width: 35px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    width: 10px;
+    height: 10px;
+    background-color: #41db51;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+/* -- CONTAINER -- */
+
+.container {
+    padding: 13px 5%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
+}
+
+.left-sidebar, .right-sidebar {
+    position: sticky;
+    top: 70px;
+}
+
+.left-sidebar ul li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.left-sidebar ul li a {
+    text-decoration: none;
+    color: #626262;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.left-sidebar ul li a img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.main-content {
+    background-color: yellow;
+}
+
+
+
+
