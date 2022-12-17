@@ -21,7 +21,8 @@ body {
     z-index: 100;
 }
 
-.left-menu, .right-menu {
+.left-menu,
+.right-menu {
     display: flex;
     align-items: center;
 }
@@ -55,7 +56,7 @@ body {
 }
 
 .search {
-    background-color: transparent; 
+    background-color: transparent;
     /* To spowoduje, że tło elementu będzie przezroczyste 
     i będzie widać tła za nim.   */
     margin-left: 5px;
@@ -97,33 +98,54 @@ body {
     gap: 30px;
 }
 
-.left-sidebar, .right-sidebar {
+.left-sidebar,
+.right-sidebar {
     position: sticky;
     top: 70px;
 }
 
-.left-sidebar ul li {
+.imp-links ul li, .shortcut-links ul li {
     list-style: none;
     margin-bottom: 30px;
 }
 
-.left-sidebar ul li a {
+.imp-links ul li a, .shortcut-links ul li a {
     text-decoration: none;
     color: #626262;
     font-size: 18px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
-.left-sidebar ul li a img {
+.imp-links ul li a img {
     width: 28px;
     margin-right: 10px;
+}
+
+.imp-links>a {
+    display: block;
+    text-decoration: none;
+    color: #1876f2;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.shortcut-links p {
+    margin: 25px 0;
+    font-weight: 600;
+    color: #626262;
+}
+
+.shortcut-links ul {
+    margin-top: 20px;
+}
+
+.shortcut-links ul li a img {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 .main-content {
     background-color: yellow;
 }
-
-
-
-
