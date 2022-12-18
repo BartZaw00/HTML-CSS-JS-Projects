@@ -98,8 +98,8 @@ body {
     gap: 30px;
 }
 
-.left-sidebar,
-.right-sidebar {
+#left-sidebar,
+#right-sidebar {
     position: sticky;
     top: 70px;
 }
@@ -150,11 +150,121 @@ body {
 
 /* -- Main -- */
 
-.main-content {
-    background-color: yellow;
+.status-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 250px;
+    margin-bottom: 25px;
 }
 
-.right-sidebar {
+.status {
+    position: relative;
+}
+
+.status .photo {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.status .upload {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 55px;
+    left: 50px;
+    cursor: pointer;
+}
+
+.status-image {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #1876f2;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.status-image img {
+    height: 100%;
+}
+
+.status-text {
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.write-post-container {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.write-post-container .profile-pic-icon {
+    width: 45px;
+}
+
+.write-post-info {
+    width: 100%;
+    padding-top: 2px;
+    color: #626262;
+}
+
+.write-post-info span {
+    font-size: 12px;
+}
+
+.write-post {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.write-post textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ddd4d4;
+    resize: none; /* usuwa te ikone z prawego dolnego rogu */
+}
+
+.write-post-icons {
+    margin-top: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.write-post-icons img {
+    width: 20px;
+}
+
+.write-post-icons span {
+    margin-right: 25px;
+}
+
+.post-container {
+    
+}
+
+/* -- Right Sidebar */
+
+#right-sidebar {
     background: #fff;
     padding: 20px;
     border-radius: 4px;
@@ -273,7 +383,8 @@ body {
 }
 
 .conversation-user .active {
-    top: unset; /* pobiera wartość top od parenta, a ta u parenta nie jest ustawiona 
+    top: unset;
+    /* pobiera wartość top od parenta, a ta u parenta nie jest ustawiona 
     więc domyślnie jest top: auto */
     bottom: 4px;
 }

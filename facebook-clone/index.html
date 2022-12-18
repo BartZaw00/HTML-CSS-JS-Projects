@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Facebook Clone</title>
 </head>
 
@@ -31,7 +32,7 @@
         </div>
     </nav>
     <div class="container">
-        <aside class="left-sidebar">
+        <aside id="left-sidebar">
             <div class="imp-links">
                 <ul>
                     <li>
@@ -70,10 +71,56 @@
                 </ul>
             </div>
         </aside>
-        <main class="main-content">
-            b
+        <main id="main-content">
+            <div class="status-gallery">
+                <div class="status">
+                    <img src="images/status-1.png" alt="status-1" class="photo">
+                    <img src="images/upload.png" alt="upload" class="upload">
+                    <span class="status-text">Post Story</span>
+                </div>
+                <div class="status">
+                    <img src="images/status-2.png" alt="status-2" class="photo">
+                    <div class="status-image"><img src="images/member-1.png" alt="member-1"></div>
+                    <span class="status-text">Alison</span>
+                </div>
+                <div class="status">
+                    <img src="images/status-3.png" alt="status-3" class="photo">
+                    <div class="status-image"><img src="images/member-2.png" alt="member-2"></div>
+                    <span class="status-text">Jackson</span>
+                </div>
+                <div class="status">
+                    <img src="images/status-4.png" alt="status-4" class="photo">
+                    <div class="status-image"><img src="images/member-3.png" alt="member-3"></div>
+                    <span class="status-text">Samana</span>
+                </div>
+                <div class="status">
+                    <img src="images/status-5.png" alt="status-5" class="photo">
+                    <div class="status-image"><img src="images/member-4.png" alt="member-4"></div>
+                    <span class="status-text">John Doe</span>
+                </div>
+            </div>
+            <div class="write-post-container">
+                <div class="profile-pic-icon">
+                    <img src="images/profile-pic.png" alt="profice-pic" class="profile-pic">
+                </div>
+                <div class="write-post-info">
+                    <h4>Jack Nicholson</h4>
+                    <span>Public </span><i class="fa fa-caret-down"></i>
+                    <div class="write-post">
+                        <textarea type="text" rows="3" placeholder="What's on your mind, John?"></textarea>
+                    </div>
+                    <div class="write-post-icons">
+                        <img src="images/live-video.png" alt="live-video"><span>Live Video</span>
+                        <img src="images/photo.png" alt="photo-video"><span>Photo/Video</span>
+                        <img src="images/feeling.png" alt="feeling-activity"><span>Feeling/Activity</span>
+                    </div>
+                </div>
+            </div>
+            <div class="post-container">
+                
+            </div>
         </main>
-        <aside class="right-sidebar">
+        <aside id="right-sidebar">
             <div class="sidebar-header">
                 <h4>Events</h4>
                 <a href="#">See All</a>
