@@ -213,7 +213,7 @@ body {
     border-radius: 10px;
 }
 
-.write-post-container .profile-pic-icon {
+.profile-pic-icon {
     width: 45px;
 }
 
@@ -238,7 +238,8 @@ body {
     border: none;
     outline: none;
     border-bottom: 1px solid #ddd4d4;
-    resize: none; /* usuwa te ikone z prawego dolnego rogu */
+    resize: none;
+    /* usuwa te ikone z prawego dolnego rogu */
 }
 
 .write-post-icons {
@@ -259,7 +260,61 @@ body {
 }
 
 .post-container {
-    
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0;
+}
+
+.post-info {
+    display: flex;
+    gap: 10px;
+}
+
+.post-container span {
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.post-container p {
+    color: #9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.post-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-icons {
+    display: flex;
+    align-items: center;
+    gap: 50px
+}
+
+.activity-icons div img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.post-profile-icon {
+    width: 20px;
+    display: flex;
+}
+
+.post-profile-icon i {
+    padding-top: 2px;
+    padding-left: 3px;
 }
 
 /* -- Right Sidebar */
