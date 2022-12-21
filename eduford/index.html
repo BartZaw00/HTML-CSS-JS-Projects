@@ -11,7 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
+
 <body>
+
+    <div id="preloader">
+        <img src="images/loader.gif" alt="loader" class="loader">
+    </div>
+
     <section id="banner">
         <img src="images/logo.png" alt="logo" class="logo">
         <div class="banner-text">
@@ -130,6 +136,43 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fu8DWJRnWzc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <!-- Increasing the page load time -->
     </section>
 
     <!-- Testimonial -->
@@ -240,10 +283,19 @@
         }
 
         var scroll = new SmoothScroll('a[href*="#"]', {
-	    speed: 1000,
-	    speedAsDuration: true
-});
+            speed: 1000,
+            speedAsDuration: true
+        });
 
+    </script>
+
+    <script> //nasza strona jest lokalnie więc ładuje się bardzo szybko
+        let loader = document.getElementById("preloader");
+
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        }
+        )
     </script>
 </body>
 

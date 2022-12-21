@@ -499,3 +499,20 @@ hr {
         top: 25%;
     }
 }
+
+#preloader {
+    background: #000;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.loader {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
