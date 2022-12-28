@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, #a2c312, 
+    #d2c312, #f2c312, #ffc312, #fff312);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 60vh;
+    min-width: 370px;
+    max-width: 370px;
+}
+
+.display {
+    width: 100%;
+    min-height: 20%;
+    max-height: min-content;
+    background-color: rgba(29, 27, 27, 0.151);
+    box-shadow: 0px 8px 24px 0px rgba(66, 68, 90, 1);
+    color: #fff;
+    word-break: break-all; 
+    /*  
+    normal - This is the default value. It specifies that the browser 
+    should break words at appropriate places based on the rules 
+    of the language being used.
+
+    break-all - This value allows words to be broken at any character, 
+    regardless of language rules.
+    
+    keep-all - This value prevents the browser from breaking words 
+    at any character, even if it means that the word extends beyond 
+    the edge of the container.
+    */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.currentNumber {
+    font-size: 35px;
+
+}
+
+.previousNumber {
+    color: rgb(182, 182, 182);
+    font-size: 20px;
+}
+
+.mathSign {
+    font-size: 22px;
+}
+
+.panel {
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
