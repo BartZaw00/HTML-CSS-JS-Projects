@@ -14,8 +14,8 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(to right bottom, #a2c312, 
-    #d2c312, #f2c312, #ffc312, #fff312);
+    background-image: linear-gradient(to right bottom, #a2c312,
+            #d2c312, #f2c312, #ffc312, #fff312);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body {
     background-color: rgba(29, 27, 27, 0.151);
     box-shadow: 0px 8px 24px 0px rgba(66, 68, 90, 1);
     color: #fff;
-    word-break: break-all; 
+    word-break: break-all;
     /*  
     normal - This is the default value. It specifies that the browser 
     should break words at appropriate places based on the rules 
@@ -73,5 +73,84 @@ body {
     height: 80%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 2px;
+}
+
+.panel button {
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.466);
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+    transition: all .2 ease-in-out;
+    /* 
+ease - specifies a transition effect with a slow start, then fast, 
+then end slowly (this is default)
+
+linear - specifies a transition effect with the same speed from start 
+to end
+
+ease-in - specifies a transition effect with a slow start
+
+ease-out - specifies a transition effect with a slow end
+
+ease-in-out - specifies a transition effect with a slow start and end
+
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier 
+function
+    */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.546);
+}
+
+.equals {
+    grid-column: -2/-1;
+    grid-row: -3/-1;
+}
+
+.calculator-history {
+    height: 60vh;
+    margin: 20px;
+    width: 150px;
+    background-color: rgba(20, 27, 27, 0.151);
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.history {
+    list-style: none;
+}
+
+.history-title {
+    padding-bottom: 10px;
+}
+
+.history-btn {
+    color: #fff;
+    background: rgba(29, 27, 27, 0.603);
+    border: none;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    margin: 5px auto;
+}
+
+.history-btn.active {
+    display: block;
+}
+
+.history-item {
+    margin: 8px 0px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(29,27,27,0.233);
+    padding-bottom: 5px;
 }
