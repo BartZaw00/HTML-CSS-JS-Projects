@@ -22,9 +22,9 @@ let result = '';
 
 function displayNumbers() {
     /* Jeżeli ktoś kliknie kropkę to currentNumber będzie zawierał kropkę */
-    if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) 
+    if (this.textContent === '.' && currentNumber.innerHTML.includes('.'))
         return;
-    if(this.textContent === '.' && currentNumber.innerHTML === '') 
+    if (this.textContent === '.' && currentNumber.innerHTML === '')
         return currentNumber.innerHTML = '.0';
 
     currentNumber.innerHTML += this.textContent;
@@ -32,32 +32,75 @@ function displayNumbers() {
 
 function operate() {
 
-    if(currentNumber.innerHTML === '' && this.textContent === '-') {
+    if (currentNumber.innerHTML === '' && this.textContent === '-') {
         currentNumber.innerHTML = '-';
-        return; 
+        return;
     }
     /* nie pokazuj operatorow na ekranie, gdy jest on pusty */
-    else if(currentNumber.innerHTML === '')
+    else if (currentNumber.innerHTML === '')
         return;
 
-    if(mathSign.innerHTML !== '')
+    if (mathSign.innerHTML !== '')
         showResult();
-    
+
     previousNumber.innerHTML = currentNumber.innerHTML;
     mathSign.innerHTML = this.textContent;
     currentNumber.innerHTML = '';
 }
 
 function showResult() {
+    if (previousNumber.innerHTML === '' || currentNumber.innerHTML === '')
+        return;
+    let a = Number(currentNumber.innerHTML); /* zmiana stringu na numer */
+    let b = Number(previousNumber.innerHTML); /* zmiana stringu na numer */
+    let operator = mathSign.innerHTML;
 
+    switch (operator) {
+        case '+':
+            result = a + b;
+            break;
+        case '-':
+            result = b - a;
+            break;
+        case 'x':
+            result = a * b;
+            break;
+        case ':':
+            result = b / a;
+            break;
+        case '2^':
+            result = b ** a;
+    }
+
+    addToHistory();
+    historyBtn.classList.add('active'); /* dodaj do listy klas klasę active */
+    currentNumber.innerHTML = result;
+    previousNumber.innerHTML = '';
+    mathSign.innerHTML = '';
 }
 
-function clearScreen() {
-
+function addToHistory() {
+    const newHistoryItem = document.createElement('li'); 
+    /* stwórz element li */
+    newHistoryItem.innerHTML = `${currentNumber.innerHTML} 
+    ${mathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`
+    newHistoryItem.classList.add('history-item'); 
+    /* do elementu li dodajemy klasę history-item */
+    calculatorHistory.appendChild(newHistoryItem);
+    /* do klasy history dodajemy elementy dzieci */
 }
 
 function clearHistory() {
+    calculatorHistory.innerHTML = '';
+    if(calculatorHistory.textContent === '')
+        historyBtn.classList.remove('active');
+}
 
+function clearScreen() {
+    result = '';
+    currentNumber.innerHTML = '';
+    previousNumber.innerHTML = '';
+    mathSign.innerHTML = '';
 }
 
 

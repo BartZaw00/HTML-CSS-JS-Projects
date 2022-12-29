@@ -61,7 +61,7 @@ body {
 }
 
 .previousNumber {
-    color: rgb(182, 182, 182);
+    color: rgb(238, 235, 235);
     font-size: 20px;
 }
 
@@ -153,4 +153,5 @@ button:hover {
     letter-spacing: 1px;
     border: 1px solid rgba(29,27,27,0.233);
     padding-bottom: 5px;
+    overflow: auto;
 }
