@@ -12,12 +12,13 @@
 <body>
     <nav id="navbar">
         <div class="color-flipper"><button>Color Flipper</button></div>
-        <div class="simple-hex"><button>Simple</button><button>Hex</button></div>
+        <div class="simple-hex"><button data-simple-button>Simple</button><button data-hex-button>Hex</button></div>
     </nav>
     <main id="container">
-        <div class="description">Background Color: <span></span></div>
-        <div class="btn-click-me">CLICK ME</div>
+        <div class="description">Background Color: <span data-color></span></div>
+        <div data-clickme-button class="btn-click-me">CLICK ME</div>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
