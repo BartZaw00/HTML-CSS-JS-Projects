@@ -17,10 +17,14 @@ let state = "a";
 
 simpleBtn.addEventListener('click', () => {
     state = "a";
+    simpleBtn.style.color = 'rgb(10,90,10)';
+    hexBtn.style.color = "#000";
 })
 
 hexBtn.addEventListener('click', () => {
     state = "b";
+    simpleBtn.style.color = '#000';
+    hexBtn.style.color = "rgb(10,90,10)";
 })
 
 clickmeBtn.addEventListener('click', () => {
