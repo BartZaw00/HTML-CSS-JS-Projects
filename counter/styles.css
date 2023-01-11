@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.number {
+    margin: 10px 0;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.buttons button {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #000;
+    color: #fff;
+}
