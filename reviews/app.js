@@ -81,7 +81,6 @@ const profileDesc = document.querySelector('[data-profile-desc]');
 
 let index = 0;
 
-setReviews();
 
 function setReviews() {
     if (index >= 0 && index <= 8) {
@@ -92,6 +91,8 @@ function setReviews() {
     }
 }
 
+
+window.addEventListener("DOMContentLoaded", setReviews);
 
 leftBtn.addEventListener('click', () => {
     index--;
@@ -112,7 +113,6 @@ rightBtn.addEventListener('click', () => {
 
 btnSurpriseMe.addEventListener('click', () => {
     index = Math.floor(Math.random() * 9);
-    console.log(index)
 
     setReviews();
 })
