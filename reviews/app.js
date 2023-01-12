@@ -70,6 +70,7 @@ const rightBtn = document.querySelector('[data-right-button]');
 
 const btnSurpriseMe = document.querySelector('[data-bottom-button]');
 
+
 const profilePhoto = document.querySelector('[data-profile-photo]');
 
 const profileName = document.querySelector('[data-profile-name]');
@@ -83,17 +84,19 @@ let index = 0;
 setReviews();
 
 function setReviews() {
-    profilePhoto.setAttribute("src", reviews[index].img);
-    profileName.innerHTML = reviews[index].name;
-    profileJob.innerHTML = reviews[index].job;
-    profileDesc.innerHTML = reviews[index].text;
+    if (index >= 0 && index <= 8) {
+        profilePhoto.setAttribute("src", reviews[index].img);
+        profileName.innerHTML = reviews[index].name;
+        profileJob.innerHTML = reviews[index].job;
+        profileDesc.innerHTML = reviews[index].text;
+    }
 }
 
 
 leftBtn.addEventListener('click', () => {
     index--;
     if (index < 0)
-        index = 9;
+        index = 8;
 
     setReviews();
 })
@@ -101,8 +104,15 @@ leftBtn.addEventListener('click', () => {
 
 rightBtn.addEventListener('click', () => {
     index++;
-    if (index > 9)
+    if (index >=9)
         index = 0;
 
     setReviews();
 })
+
+btnSurpriseMe.addEventListener('click', () => {
+    index = Math.floor(Math.random() * 10);
+
+    setReviews();
+})
+
