@@ -104,14 +104,15 @@ leftBtn.addEventListener('click', () => {
 
 rightBtn.addEventListener('click', () => {
     index++;
-    if (index >=9)
+    if (index > 8)
         index = 0;
 
     setReviews();
 })
 
 btnSurpriseMe.addEventListener('click', () => {
-    index = Math.floor(Math.random() * 10);
+    index = Math.floor(Math.random() * 9);
+    console.log(index)
 
     setReviews();
 })
