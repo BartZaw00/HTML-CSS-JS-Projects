@@ -1,10 +1,11 @@
-const questionBtns = document.querySelectorAll('[data-button]');
+const questions = document.querySelectorAll('[data-question]');
 
-questionBtns.forEach(button => {
+questions.forEach((question) => {
+    const button = question.querySelector('[data-button]')
     button.addEventListener('click', (e) => {
         /* active - wybranie nastepnego elementu aby zmienic jego css */
         const active = e.currentTarget.nextElementSibling;
-        if (button.textContent == '+') {
+        if (button.textContent === '+') {
             button.innerHTML = '-';
             active.style.display = 'block';
         }
@@ -12,5 +13,6 @@ questionBtns.forEach(button => {
             button.innerHTML = '+';
             active.style.display = 'none';
         }
+
     });
 });
