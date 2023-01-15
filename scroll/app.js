@@ -8,5 +8,6 @@ menuBtn.addEventListener('click', () => {
 });
 
 window.addEventListener("scroll", function() {
-    navbar.classList.add('shrink');
+    if (window.scrollY < 100) navbar.classList.remove('shrink');
+    else navbar.classList.add('shrink');
 });
