@@ -12,8 +12,19 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    padding: 5px 75px;
     z-index: -999;
+}
+
+.shrink {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.shrink .navbar-text a{
+    color: #000;
 }
 
 .navbar-top {
@@ -21,6 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 75px;
 }
 
 .navbar-top .logo {
@@ -106,7 +118,11 @@
 
 @media (max-width: 1000px) {
     #banner {
-        padding: 5px 25px;
+        padding: 0;
+    }
+    .navbar-top {
+        background-color: #fff;
+        padding: 0 25px;
     }
     .navbar-top a {
         display: none;
