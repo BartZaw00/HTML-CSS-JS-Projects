@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#banner {
+    background: linear-gradient(rgb(10, 226, 205, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 75px;
+    z-index: -999;
+}
+
+.navbar-top {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-top .logo {
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.navbar-text a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.navbar-text {
+    z-index: 10;
+}
+
+.navbar-text .menu {
+    display: none;
+}
+
+.banner-text {
+    text-align: center;
+    padding-top: 380px;
+    margin: 0 auto;
+    color: #fff;
+    width: 700px;
+}
+
+.banner-text h1 {
+    font-size: 80px;
+}
+
+.banner-text p {
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.banner-text button {
+    color: #fff;
+    background: transparent;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.banner-text button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.scroll-navbar {
+    display: none;
+}
+
+.section-element {
+    height: 90vh;
+}
+
+.section-element h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-element h1 span {
+    color: rgb(10, 226, 205);
+}
+
+#about,
+#tours {
+    background-color: #eee;
+}
+
+#footer {
+    height: 20vh;
+    background-color: darkcyan;
+}
+
+@media (max-width: 1000px) {
+    #banner {
+        padding: 5px 25px;
+    }
+    .navbar-top a {
+        display: none;
+    }
+    .navbar-text .menu {
+        display: block;
+        cursor: pointer;
+    }
+}
