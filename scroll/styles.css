@@ -43,6 +43,10 @@
     z-index: 10;
 }
 
+.navbar-top .logo img {
+    height: 100%;
+}
+
 .navbar-top .menu {
     display: none;
 }
