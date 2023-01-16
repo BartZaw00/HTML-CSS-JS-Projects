@@ -122,6 +122,29 @@
     background-color: darkcyan;
 }
 
+/* -- ARROW-UP-BUTTON -- */
+
+.arrow-up-button {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: darkcyan;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.arrow-up-button img { 
+    width: 100%;
+    padding: 10px;
+}
+
+.display-block {
+    display: block;
+}
+
 /* -- MEDIA QUERIES -- */
 
 @media (max-width: 1800px) {
