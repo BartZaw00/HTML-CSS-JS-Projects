@@ -5,6 +5,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* -- BANNER -- */
 
 #banner {
@@ -136,7 +140,7 @@
     display: none;
 }
 
-.arrow-up-button img { 
+.arrow-up-button img {
     width: 100%;
     padding: 10px;
 }
