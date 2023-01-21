@@ -70,7 +70,6 @@ const rightBtn = document.querySelector('[data-right-button]');
 
 const btnSurpriseMe = document.querySelector('[data-bottom-button]');
 
-
 const profilePhoto = document.querySelector('[data-profile-photo]');
 
 const profileName = document.querySelector('[data-profile-name]');
@@ -84,7 +83,7 @@ let index = 0;
 
 function setReviews() {
     if (index >= 0 && index <= 8) {
-        profilePhoto.setAttribute("src", reviews[index].img);
+        profilePhoto.src = reviews[index].img;
         profileName.innerHTML = reviews[index].name;
         profileJob.innerHTML = reviews[index].job;
         profileDesc.innerHTML = reviews[index].text;
