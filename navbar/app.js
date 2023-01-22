@@ -1,16 +1,12 @@
-const sideBtn = document.querySelector('[data-button]');
+const sideBtn = document.querySelector('[data-nav-toggle]');
 
-const sidebar = document.querySelector('[data-sidebar]');
+const sidebarContent = document.querySelector('[data-nav-content]');
 
+const sidebarIcons = document.querySelector('[data-nav-icons]');
 
 
 sideBtn.addEventListener('click', () => {
-    if (sidebar.style.right === '0px') {
-        sidebar.style.right = '-250px';
-        sideBtn.style.backgroundImage = 'url("images/menu.png")';
-    }
-    else {
-        sidebar.style.right = '0px';
-        sideBtn.style.backgroundImage = 'url("images/close.png")';
-    }
+        sidebarContent.classList.toggle('right');
+        sidebarIcons.classList.toggle('right');
+        sideBtn.classList.toggle('btn-image');
 });
