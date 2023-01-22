@@ -6,9 +6,9 @@ const modal = document.querySelector('[data-modal]');
 
 
 btnModal.addEventListener('click', () => {
-    modal.style.display = 'block';
+    modal.classList.add('show-modal');
 });
 
 btnModalExit.addEventListener('click', () => {
-    modal.style.display = 'none';
+    modal.classList.remove('show-modal');
 });
