@@ -1,18 +1,18 @@
 const countdownElement = document.querySelectorAll('.countdown');
 
 // Tworzymy obiekt Date i ustawiamy czas końcowy
-let deadline = new Date(2023, 3, 2, 18, 0, 0);
+let deadline = new Date(2023, 3, 2, 19, 0);
 
 let actualDate = new Date();
 
 let seconds = Math.floor((deadline - actualDate) / 1000);
 
-let minutes = Math.floor(seconds / 60);
+let minutes;
+let hours;
+let days;
 
-let hours = Math.floor(minutes / 60);
 
-let days = Math.floor(hours / 24);
-
+console.log(deadline)
 
 let interval = setInterval(() => {
     actualDate = new Date();
