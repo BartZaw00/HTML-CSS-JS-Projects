@@ -77,4 +77,3 @@ form.addEventListener('submit', (e) => {
         article.innerHTML = tempText;
     }
 });
-
